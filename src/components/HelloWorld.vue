@@ -1,42 +1,88 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <h1>{{scoreText}}</h1>
+    <div class="imageHolder">
+      <img v-on:click="getCountries()" class="flag" :src="getFlag()">
+    </div>
+    <div class="answers">
+   <button class="answer" v-for="country in orderedCountries" :key="country.code" v-on:click="checkCountry(country)">{{country.name}}</button>
+  </div>
   </div>
 </template>
 
 <script>
+import countries from "svg-country-flags/countries.json";
+import sampleSize from "lodash/sampleSize";
+import orderBy from "lodash/orderBy";
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  name: "HelloWorld",
+  data: () => {
+    return {
+      currentCountry: {},
+      currentCountries: [],
+      countries: [],
+      maxScore: 0,
+      currentScore: 0
+    };
+  },
+  computed: {
+    orderedCountries: function() {
+      return orderBy(this.currentCountries, "name");
+    },
+    scoreText: function() {
+      if (this.currentCountries.length === 0) {
+        return "Hallo Wereld";
+      } else if (this.currentScore === 0) {
+        return "Raad de vlag!";
+      } else {
+        return "Je hebt " + this.currentScore + " punten!";
+      }
+    }
+  },
+  created: function() {
+    for (let country in countries) {
+      this.countries.push({
+        code: country.toLowerCase(),
+        name: countries[country]
+      });
+    }
+  },
+  methods: {
+    getRandomCountry: function() {
+      this.currentCountry = sampleSize(this.countries, 1);
+    },
+    getFlag: function() {
+      if (this.currentCountries.length > 0) {
+        return require("./../assets/flags/" +
+          this.currentCountries[0].code +
+          ".svg");
+      } else {
+        return require("./../assets/world-map.svg");
+      }
+    },
+    getCountries: function() {
+      console.log("hola");
+      this.currentCountries = sampleSize(this.countries, 4);
+      this.currentCountries[0].isWinner = true;
+    },
+    checkCountry: function(country) {
+      if (country.isWinner) {
+        this.currentScore++;
+        this.getCountries();
+      } else {
+        if (this.currentScore > this.maxScore) {
+          this.maxScore = this.currentScore;
+          alert(`proficiat met je nieuw record van ${this.maxScore} punten`);
+        } else {
+          alert("boehoehoe");
+        }
+        this.currentCountries = [];
+        this.currentScore = 0;
+      }
+    }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -44,15 +90,39 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
-ul {
-  list-style-type: none;
+
+.imageHolder {
+  box-sizing: border-box;
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+}
+.flag {
+  max-width: 70%;
+  max-height: 50vh;
   padding: 0;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #fafafa;
+  justify-content: center;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.answers {
+  display: flex;
+  flex-wrap: wrap;
 }
-a {
-  color: #42b983;
+.answer {
+  width: 150px;
+  text-align: left;
+  font-size: 1em;
+  height: 40px;
+  background-color: white;
+  border: 1px solid lightseagreen;
+  border-radius: 6px;
+  color: lightseagreen;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  margin: 16px;
 }
 </style>
