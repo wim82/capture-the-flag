@@ -7,7 +7,7 @@
     <div class="answers">
       <button class="answer" v-for="country in orderedCountries" :key="country.code" 
               v-on:click="checkCountry(country, $event)" 
-              v-bind:class="[country.isWinner ? 'right' : '']"
+              v-bind:class="[country.code === correctCountry.code ? 'right' : '']"
       >{{country.name}}</button>
     </div>
      <p class="result">{{resultText}}</p>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import countries from "svg-country-flags/countries.json";
+import countries from "./../assets/countries.json";
 import sampleSize from "lodash/sampleSize";
 import orderBy from "lodash/orderBy";
 
@@ -23,9 +23,9 @@ export default {
   name: "HelloWorld",
   data: () => {
     return {
-      currentCountry: {},
+      correctCountry: null,
       currentCountries: [],
-      countries: [],
+      countries: countries,
       maxScore: 0,
       currentScore: 0,
       hasEnded: false
@@ -58,14 +58,6 @@ export default {
       }
     }
   },
-  created: function() {
-    for (let country in countries) {
-      this.countries.push({
-        code: country.toLowerCase(),
-        name: countries[country]
-      });
-    }
-  },
   methods: {
     getFlag: function() {
       if (this.currentCountries.length > 0) {
@@ -78,16 +70,19 @@ export default {
     },
     getCountries: function() {
       this.currentCountries = sampleSize(this.countries, 4);
-      this.currentCountries[0].isWinner = true;
+      this.correctCountry = this.currentCountries[0];
     },
     playAgain: function() {
       this.getCountries();
       this.currentScore = 0;
       this.hasEnded = false;
+      document
+        .querySelectorAll(".answer")
+        .forEach(element => element.classList.remove("reveal"));
     },
     checkCountry: function(country, event) {
       setTimeout(() => {
-        if (country.isWinner) {
+        if (country.code === this.correctCountry.code) {
           this.currentScore++;
           this.getCountries();
         } else {
@@ -109,31 +104,35 @@ export default {
 <style scoped>
 .hello {
   padding: 0 10px;
+  max-width: 800px;
 }
 .imageHolder {
   box-sizing: border-box;
   width: 100%;
-  height: 45vh;
+  height: 40vh;
   display: flex;
   align-items: center;
 }
 .flag {
-  max-width: 70%;
-  max-height: 50vh;
+  max-width: 90%;
+  max-height: 40vh;
   padding: 0;
   height: auto;
   margin: 0 auto;
-  border: 1px solid #fafafa;
   justify-content: center;
+  box-shadow: -2px 4px 24px 3px rgba(77, 77, 77, 0.32);
 }
 .answers {
   display: flex;
   flex-wrap: wrap;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: center;
 }
 .answer {
-  width: 150px;
+  width: 335px;
   text-align: left;
-  font-size: 1em;
+  font-size: 1.25em;
   height: 40px;
   background-color: white;
   border: 1px solid lightseagreen;
@@ -164,5 +163,11 @@ export default {
 .result {
   text-align: left;
   font-size: 1em;
+}
+
+@media (min-width: 420px) {
+  .answers {
+    margin-top: 40px;
+  }
 }
 </style>
