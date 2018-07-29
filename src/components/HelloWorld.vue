@@ -1,12 +1,16 @@
 <template>
   <div class="hello">
-    <h1>{{scoreText}}</h1>
+    <h1 v-on:click="playAgain()">{{scoreText}}</h1>
     <div class="imageHolder">
-      <img v-on:click="getCountries()" class="flag" :src="getFlag()">
+      <img v-on:click="playAgain()" class="flag" :src="getFlag()">
     </div>
     <div class="answers">
-   <button class="answer" v-for="country in orderedCountries" :key="country.code" v-on:click="checkCountry(country)">{{country.name}}</button>
-  </div>
+      <button class="answer" v-for="country in orderedCountries" :key="country.code" 
+              v-on:click="checkCountry(country, $event)" 
+              v-bind:class="[country.isWinner ? 'right' : '']"
+      >{{country.name}}</button>
+    </div>
+     <p class="result">{{resultText}}</p>
   </div>
 </template>
 
@@ -23,14 +27,28 @@ export default {
       currentCountries: [],
       countries: [],
       maxScore: 0,
-      currentScore: 0
+      currentScore: 0,
+      hasEnded: false
     };
   },
   computed: {
     orderedCountries: function() {
       return orderBy(this.currentCountries, "name");
     },
+    resultText: function() {
+      if (this.hasEnded) {
+        return `Goed zo! Je behaalde ${
+          this.currentScore
+        } punten. Duw op de vlag om opnieuw te beginnen. Volgende keer beter! 👍👍👍`;
+      }
+      if (this.currentCountries.length === 0) {
+        return "Spelletjestijd! Raad de vlag. Duw op de wereld om te beginnen. Veel succes! 👍👍👍";
+      }
+    },
     scoreText: function() {
+      if (this.hasEnded) {
+        return "😢 Verloren 😢";
+      }
       if (this.currentCountries.length === 0) {
         return "Hallo Wereld";
       } else if (this.currentScore === 0) {
@@ -49,9 +67,6 @@ export default {
     }
   },
   methods: {
-    getRandomCountry: function() {
-      this.currentCountry = sampleSize(this.countries, 1);
-    },
     getFlag: function() {
       if (this.currentCountries.length > 0) {
         return require("./../assets/flags/" +
@@ -62,39 +77,43 @@ export default {
       }
     },
     getCountries: function() {
-      console.log("hola");
       this.currentCountries = sampleSize(this.countries, 4);
       this.currentCountries[0].isWinner = true;
     },
-    checkCountry: function(country) {
-      if (country.isWinner) {
-        this.currentScore++;
-        this.getCountries();
-      } else {
-        if (this.currentScore > this.maxScore) {
-          this.maxScore = this.currentScore;
-          alert(`proficiat met je nieuw record van ${this.maxScore} punten`);
+    playAgain: function() {
+      this.getCountries();
+      this.currentScore = 0;
+      this.hasEnded = false;
+    },
+    checkCountry: function(country, event) {
+      setTimeout(() => {
+        if (country.isWinner) {
+          this.currentScore++;
+          this.getCountries();
         } else {
-          alert("boehoehoe");
+          if (this.currentScore > this.maxScore) {
+            this.maxScore = this.currentScore;
+          }
+          event.target.classList.add("wrong");
+          document
+            .querySelectorAll(".answer")
+            .forEach(element => element.classList.add("reveal"));
+          this.hasEnded = true;
         }
-        this.currentCountries = [];
-        this.currentScore = 0;
-      }
+      }, 300);
     }
   }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.hello {
+  padding: 0 10px;
 }
-
 .imageHolder {
   box-sizing: border-box;
   width: 100%;
-  height: 55vh;
+  height: 45vh;
   display: flex;
   align-items: center;
 }
@@ -123,6 +142,27 @@ h3 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow-x: hidden;
-  margin: 16px;
+  margin: 8px;
+  transition: all 0.3s ease-out;
+}
+
+.answer:hover,
+.answer:active {
+  background-color: lightseagreen;
+  color: white;
+}
+
+.answer.reveal.wrong {
+  background-color: red;
+  color: white;
+  border-color: red;
+}
+.answer.reveal.right {
+  background-color: lightseagreen;
+  color: white;
+}
+.result {
+  text-align: left;
+  font-size: 1em;
 }
 </style>

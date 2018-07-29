@@ -5,10 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "serve dist"
   },
   "dependencies": {
     "lodash": "^4.17.10",
+    "serve": "^9.4.0",
     "svg-country-flags": "^1.2.3",
     "vue": "^2.5.16"
   },
