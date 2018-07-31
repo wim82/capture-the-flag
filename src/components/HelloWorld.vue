@@ -25,7 +25,7 @@ export default {
     return {
       correctCountry: null,
       currentCountries: [],
-      countries: countries,
+      countries: countries.filter(country => country.level === 1),
       maxScore: 0,
       currentScore: 0,
       hasEnded: false
@@ -80,7 +80,17 @@ export default {
         .querySelectorAll(".answer")
         .forEach(element => element.classList.remove("reveal"));
     },
+    increaseLevelIfNeeded: function() {
+      if (this.currentScore === 20) {
+        this.countries = countries.filter(country => country.level < 3);
+      }
+
+      if (this.countries === 50) {
+        this.countries = countries;
+      }
+    },
     checkCountry: function(country, event) {
+      this.increaseLevelIfNeeded();
       setTimeout(() => {
         if (country.code === this.correctCountry.code) {
           this.currentScore++;
@@ -147,7 +157,7 @@ export default {
 
 .answer:hover,
 .answer:active {
-  background-color: lightseagreen;
+  background-color: seagreen;
   color: white;
 }
 
@@ -157,8 +167,10 @@ export default {
   border-color: red;
 }
 .answer.reveal.right {
-  background-color: lightseagreen;
+  background-color: seagreen;
   color: white;
+  border: 2px solid seagreen;
+  box-shadow: -2px 4px 24px 3px rgba(77, 77, 77, 0.32);
 }
 .result {
   text-align: left;

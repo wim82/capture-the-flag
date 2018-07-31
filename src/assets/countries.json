@@ -1,766 +1,1021 @@
 [{
     "code": "ad",
-    "name": "Andorra"
+    "name": "Andorra",
+    "level": 2
 }, {
     "code": "ae",
-    "name": "Verenigde Arabische Emiraten"
+    "name": "Verenigde Arabische Emiraten",
+    "level": 3
 }, {
     "code": "af",
-    "name": "Afghanistan"
+    "name": "Afghanistan",
+    "level": 2
 }, {
     "code": "ag",
-    "name": "Antigua en Barbuda"
+    "name": "Antigua en Barbuda",
+    "level": 3
 }, {
     "code": "ai",
-    "name": "Anguilla"
+    "name": "Anguilla",
+    "level": 3
 }, {
     "code": "al",
-    "name": "Albanië"
+    "name": "Albanië",
+    "level": 2
 }, {
     "code": "am",
-    "name": "Armenië"
+    "name": "Armenië",
+    "level": 3
 }, {
     "code": "ao",
-    "name": "Angola"
+    "name": "Angola",
+    "level": 3
 }, {
     "code": "aq",
-    "name": "Antarctica"
+    "name": "Antarctica",
+    "level": 3
 }, {
     "code": "ar",
-    "name": "Argentinië"
+    "name": "Argentinië",
+    "level": 1
 }, {
     "code": "as",
-    "name": "Amerikaans-Samoa"
+    "name": "Amerikaans-Samoa",
+    "level": 3
 }, {
     "code": "at",
-    "name": "Oostenrijk"
+    "name": "Oostenrijk",
+    "level": 1
 }, {
     "code": "au",
-    "name": "Australië"
+    "name": "Australië",
+    "level": 1
 }, {
     "code": "aw",
-    "name": "Aruba"
+    "name": "Aruba",
+    "level": 3
 }, {
     "code": "ax",
-    "name": "Åland"
+    "name": "Åland",
+    "level": 3
 }, {
     "code": "az",
-    "name": "Azerbeidzjan"
+    "name": "Azerbeidzjan",
+    "level": 3
 }, {
     "code": "ba",
-    "name": "Bosnië-Herzegovina"
+    "name": "Bosnië-Herzegovina",
+    "level": 2
 }, {
     "code": "bb",
-    "name": "Barbados"
+    "name": "Barbados",
+    "level": 3
 }, {
     "code": "bd",
-    "name": "Bangladesh"
+    "name": "Bangladesh",
+    "level": 3
 }, {
     "code": "be",
-    "name": "België"
+    "name": "België",
+    "level": 1
 }, {
     "code": "bf",
-    "name": "Burkina Faso"
+    "name": "Burkina Faso",
+    "level": 3
 }, {
     "code": "bg",
-    "name": "Bulgarije"
+    "name": "Bulgarije",
+    "level": 2
 }, {
     "code": "bh",
-    "name": "Bahrein"
+    "name": "Bahrein",
+    "level": 3
 }, {
     "code": "bi",
-    "name": "Burundi"
+    "name": "Burundi",
+    "level": 3
 }, {
     "code": "bj",
-    "name": "Benin"
+    "name": "Benin",
+    "level": 3
 }, {
     "code": "bl",
-    "name": "Saint Barthélemy"
+    "name": "Saint Barthélemy",
+    "level": 3
 }, {
     "code": "bm",
-    "name": "Bermuda"
+    "name": "Bermuda",
+    "level": 3
 }, {
     "code": "bn",
-    "name": "Brunei Darussalam"
+    "name": "Brunei Darussalam",
+    "level": 3
 }, {
     "code": "bo",
-    "name": "Bolivië"
+    "name": "Bolivië",
+    "level": 3
 }, {
     "code": "bq",
-    "name": "Bonaire, Sint Eustatius en Saba"
+    "name": "Bonaire, Sint Eustatius en Saba",
+    "level": 3
 }, {
     "code": "br",
-    "name": "Brazilië"
+    "name": "Brazilië",
+    "level": 1
 }, {
     "code": "bs",
-    "name": "Bahama's"
+    "name": "Bahama's",
+    "level": 3
 }, {
     "code": "bt",
-    "name": "Bhutan"
+    "name": "Bhutan",
+    "level": 3
 }, {
     "code": "bv",
-    "name": "Bouvet Eiland"
+    "name": "Bouvet Eiland",
+    "level": 3
 }, {
     "code": "bw",
-    "name": "Botswana"
+    "name": "Botswana",
+    "level": 3
 }, {
     "code": "by",
-    "name": "Wit-Rusland"
+    "name": "Wit-Rusland",
+    "level": 3
 }, {
     "code": "bz",
-    "name": "Belize"
+    "name": "Belize",
+    "level": 3
 }, {
     "code": "ca",
-    "name": "Canada"
+    "name": "Canada",
+    "level": 2
 }, {
     "code": "cc",
-    "name": "Cocoseilanden"
+    "name": "Cocoseilanden",
+    "level": 3
 }, {
     "code": "cd",
-    "name": "Congo, Democratische Republiek"
+    "name": "Congo, Democratische Republiek",
+    "level": 3
 }, {
     "code": "cf",
-    "name": "Centraal-Afrikaanse Republiek"
+    "name": "Centraal-Afrikaanse Republiek",
+    "level": 3
 }, {
     "code": "cg",
-    "name": "Congo, Volksrepubliek"
+    "name": "Congo, Volksrepubliek",
+    "level": 3
 }, {
     "code": "ch",
-    "name": "Zwitserland"
+    "name": "Zwitserland",
+    "level": 1
 }, {
     "code": "ci",
-    "name": "Ivoorkust"
+    "name": "Ivoorkust",
+    "level": 2
 }, {
     "code": "ck",
-    "name": "Cookeilanden"
+    "name": "Cookeilanden",
+    "level": 3
 }, {
     "code": "cl",
-    "name": "Chili"
+    "name": "Chili",
+    "level": 2
 }, {
     "code": "cm",
-    "name": "Kameroen"
+    "name": "Kameroen",
+    "level": 3
 }, {
     "code": "cn",
-    "name": "China"
+    "name": "China",
+    "level": 1
 }, {
     "code": "co",
-    "name": "Colombia"
+    "name": "Colombia",
+    "level": 2
 }, {
     "code": "cr",
-    "name": "Costa Rica"
+    "name": "Costa Rica",
+    "level": 2
 }, {
     "code": "cu",
-    "name": "Cuba"
+    "name": "Cuba",
+    "level": 2
 }, {
     "code": "cv",
-    "name": "Kaapverdië"
+    "name": "Kaapverdië",
+    "level": 3
 }, {
     "code": "cw",
-    "name": "Curaçao"
+    "name": "Curaçao",
+    "level": 3
 }, {
     "code": "cx",
-    "name": "Christmaseiland"
+    "name": "Christmaseiland",
+    "level": 3
 }, {
     "code": "cy",
-    "name": "Cyprus"
+    "name": "Cyprus",
+    "level": 2
 }, {
     "code": "cz",
-    "name": "Tsjechië"
+    "name": "Tsjechië",
+    "level": 2
 }, {
     "code": "de",
-    "name": "Duitsland"
+    "name": "Duitsland",
+    "level": 1
 }, {
     "code": "dj",
-    "name": "Djibouti"
+    "name": "Djibouti",
+    "level": 3
 }, {
     "code": "dk",
-    "name": "Denemarken"
+    "name": "Denemarken",
+    "level": 1
 }, {
     "code": "dm",
-    "name": "Dominica"
+    "name": "Dominica",
+    "level": 3
 }, {
     "code": "do",
-    "name": "Dominicaanse Republiek"
+    "name": "Dominicaanse Republiek",
+    "level": 3
 }, {
     "code": "dz",
-    "name": "Algerije"
+    "name": "Algerije",
+    "level": 2
 }, {
     "code": "ec",
-    "name": "Ecuador"
+    "name": "Ecuador",
+    "level": 2
 }, {
     "code": "ee",
-    "name": "Estland"
+    "name": "Estland",
+    "level": 2
 }, {
     "code": "eg",
-    "name": "Egypte"
+    "name": "Egypte",
+    "level": 2
 }, {
     "code": "eh",
-    "name": "Westelijke Sahara"
+    "name": "Westelijke Sahara",
+    "level": 3
 }, {
     "code": "er",
-    "name": "Eritrea"
+    "name": "Eritrea",
+    "level": 3
 }, {
     "code": "es",
-    "name": "Spanje"
+    "name": "Spanje",
+    "level": 1
 }, {
     "code": "et",
-    "name": "Ethiopië"
+    "name": "Ethiopië",
+    "level": 2
 }, {
     "code": "eu",
-    "name": "Europe"
+    "name": "Europe",
+    "level": 1
 }, {
     "code": "fi",
-    "name": "Finland"
+    "name": "Finland",
+    "level": 1
 }, {
     "code": "fj",
-    "name": "Fiji"
+    "name": "Fiji",
+    "level": 3
 }, {
     "code": "fk",
-    "name": "Falklandeilanden"
+    "name": "Falklandeilanden",
+    "level": 3
 }, {
     "code": "fm",
-    "name": "Micronesië, Federale Staten"
+    "name": "Micronesië, Federale Staten",
+    "level": 3
 }, {
     "code": "fo",
-    "name": "Faeröer"
+    "name": "Faeröer",
+    "level": 3
 }, {
     "code": "fr",
-    "name": "Frankrijk"
+    "name": "Frankrijk",
+    "level": 1
 }, {
     "code": "ga",
-    "name": "Gabon"
+    "name": "Gabon",
+    "level": 3
 }, {
     "code": "gb-eng",
-    "name": "England"
+    "name": "England",
+    "level": 1
 }, {
     "code": "gb-nir",
-    "name": "Northern Ireland"
+    "name": "Northern Ireland",
+    "level": 3
 }, {
     "code": "gb-sct",
-    "name": "Scotland"
+    "name": "Scotland",
+    "level": 2
 }, {
     "code": "gb-wls",
-    "name": "Wales"
+    "name": "Wales",
+    "level": 2
 }, {
     "code": "gb",
-    "name": "Verenigd Koninkrijk"
+    "name": "Verenigd Koninkrijk",
+    "level": 1
 }, {
     "code": "gd",
-    "name": "Grenada"
+    "name": "Grenada",
+    "level": 3
 }, {
     "code": "ge",
-    "name": "Georgië"
+    "name": "Georgië",
+    "level": 3
 }, {
     "code": "gf",
-    "name": "Frans-Guyana"
+    "name": "Frans-Guyana",
+    "level": 3
 }, {
     "code": "gg",
-    "name": "Guernsey"
+    "name": "Guernsey",
+    "level": 3
 }, {
     "code": "gh",
-    "name": "Ghana"
+    "name": "Ghana",
+    "level": 3
 }, {
     "code": "gi",
-    "name": "Gibraltar"
+    "name": "Gibraltar",
+    "level": 3
 }, {
     "code": "gl",
-    "name": "Groenland"
+    "name": "Groenland",
+    "level": 3
 }, {
     "code": "gm",
-    "name": "Gambia"
+    "name": "Gambia",
+    "level": 3
 }, {
     "code": "gn",
-    "name": "Guinea"
+    "name": "Guinea",
+    "level": 3
 }, {
     "code": "gp",
-    "name": "Guadeloupe"
+    "name": "Guadeloupe",
+    "level": 3
 }, {
     "code": "gq",
-    "name": "Equatoriaal-Guinea"
+    "name": "Equatoriaal-Guinea",
+    "level": 3
 }, {
     "code": "gr",
-    "name": "Griekenland"
+    "name": "Griekenland",
+    "level": 1
 }, {
     "code": "gs",
-    "name": "Zuid-Georgia en de Zuidelijke Sandwicheilanden"
+    "name": "Zuid-Georgia en de Zuidelijke Sandwicheilanden",
+    "level": 3
 }, {
     "code": "gt",
-    "name": "Guatemala"
+    "name": "Guatemala",
+    "level": 3
 }, {
     "code": "gu",
-    "name": "Guam"
+    "name": "Guam",
+    "level": 3
 }, {
     "code": "gw",
-    "name": "Guinee-Bissau"
+    "name": "Guinee-Bissau",
+    "level": 3
 }, {
     "code": "gy",
-    "name": "Guyana"
+    "name": "Guyana",
+    "level": 3
 }, {
     "code": "hk",
-    "name": "Hong Kong"
+    "name": "Hong Kong",
+    "level": 2
 }, {
     "code": "hm",
-    "name": "Heard en McDonaldeilanden"
+    "name": "Heard en McDonaldeilanden",
+    "level": 3
 }, {
     "code": "hn",
-    "name": "Honduras"
+    "name": "Honduras",
+    "level": 2
 }, {
     "code": "hr",
-    "name": "Kroatië"
+    "name": "Kroatië",
+    "level": 1
 }, {
     "code": "ht",
-    "name": "Haïti"
+    "name": "Haïti",
+    "level": 3
 }, {
     "code": "hu",
-    "name": "Hongarije"
+    "name": "Hongarije",
+    "level": 2
 }, {
     "code": "id",
-    "name": "Indonesia"
+    "name": "Indonesia",
+    "level": 3
 }, {
     "code": "ie",
-    "name": "Ierland"
+    "name": "Ierland",
+    "level": 1
 }, {
     "code": "il",
-    "name": "Israël"
+    "name": "Israël",
+    "level": 1
 }, {
     "code": "im",
-    "name": "Eiland Man"
+    "name": "Eiland Man",
+    "level": 3
 }, {
     "code": "in",
-    "name": "India"
+    "name": "India",
+    "level": 1
 }, {
     "code": "io",
-    "name": "Brits Indische oceaan"
+    "name": "Brits Indische oceaan",
+    "level": 3
 }, {
     "code": "iq",
-    "name": "Irak"
+    "name": "Irak",
+    "level": 2
 }, {
     "code": "ir",
-    "name": "Iran"
+    "name": "Iran",
+    "level": 2
 }, {
     "code": "is",
-    "name": "IJsland"
+    "name": "IJsland",
+    "level": 1
 }, {
     "code": "it",
-    "name": "Italië"
+    "name": "Italië",
+    "level": 1
 }, {
     "code": "je",
-    "name": "Jersey"
+    "name": "Jersey",
+    "level": 3
 }, {
     "code": "jm",
-    "name": "Jamaica"
+    "name": "Jamaica",
+    "level": 2
 }, {
     "code": "jo",
-    "name": "Jordanië"
+    "name": "Jordanië",
+    "level": 3
 }, {
     "code": "jp",
-    "name": "Japan"
+    "name": "Japan",
+    "level": 1
 }, {
     "code": "ke",
-    "name": "Kenia"
+    "name": "Kenia",
+    "level": 2
 }, {
     "code": "kg",
-    "name": "Kirgizstan"
+    "name": "Kirgizstan",
+    "level": 3
 }, {
     "code": "kh",
-    "name": "Cambodja"
+    "name": "Cambodja",
+    "level": 3
 }, {
     "code": "ki",
-    "name": "Kiribati"
+    "name": "Kiribati",
+    "level": 3
 }, {
     "code": "km",
-    "name": "Comoren"
+    "name": "Comoren",
+    "level": 3
 }, {
     "code": "kn",
-    "name": "Saint Kitts en Nevis"
+    "name": "Saint Kitts en Nevis",
+    "level": 3
 }, {
     "code": "kp",
-    "name": "Noord-Korea"
+    "name": "Noord-Korea",
+    "level": 2
 }, {
     "code": "kr",
-    "name": "Zuid-Korea"
+    "name": "Zuid-Korea",
+    "level": 1
 }, {
     "code": "kw",
-    "name": "Koeweit"
+    "name": "Koeweit",
+    "level": 3
 }, {
     "code": "ky",
-    "name": "Kaaimaneilanden"
+    "name": "Kaaimaneilanden",
+    "level": 3
 }, {
     "code": "kz",
-    "name": "Kazachstan"
+    "name": "Kazachstan",
+    "level": 3
 }, {
     "code": "la",
-    "name": "Laos"
+    "name": "Laos",
+    "level": 3
 }, {
     "code": "lb",
-    "name": "Libanon"
+    "name": "Libanon",
+    "level": 3
 }, {
     "code": "lc",
-    "name": "Saint Lucia"
+    "name": "Saint Lucia",
+    "level": 3
 }, {
     "code": "li",
-    "name": "Liechtenstein"
+    "name": "Liechtenstein",
+    "level": 2
 }, {
     "code": "lk",
-    "name": "Sri Lanka"
+    "name": "Sri Lanka",
+    "level": 3
 }, {
     "code": "lr",
-    "name": "Liberia"
+    "name": "Liberia",
+    "level": 2
 }, {
     "code": "ls",
-    "name": "Lesotho"
+    "name": "Lesotho",
+    "level": 2
 }, {
     "code": "lt",
-    "name": "Litouwen"
+    "name": "Litouwen",
+    "level": 2
 }, {
     "code": "lu",
-    "name": "Luxemburg"
+    "name": "Luxemburg",
+    "level": 2
 }, {
     "code": "lv",
-    "name": "Letland"
+    "name": "Letland",
+    "level": 2
 }, {
     "code": "ly",
-    "name": "Libië"
+    "name": "Libië",
+    "level": 2
 }, {
     "code": "ma",
-    "name": "Marokko"
+    "name": "Marokko",
+    "level": 1
 }, {
     "code": "mc",
-    "name": "Monaco"
+    "name": "Monaco",
+    "level": 2
 }, {
     "code": "md",
-    "name": "Moldavië"
+    "name": "Moldavië",
+    "level": 2
 }, {
     "code": "me",
-    "name": "Montenegro"
+    "name": "Montenegro",
+    "level": 3
 }, {
     "code": "mf",
-    "name": "Sint-Maarten (Frans deel)"
+    "name": "Sint-Maarten (Frans deel)",
+    "level": 3
 }, {
     "code": "mg",
-    "name": "Madagaskar"
+    "name": "Madagaskar",
+    "level": 2
 }, {
     "code": "mh",
-    "name": "Marshalleilanden"
+    "name": "Marshalleilanden",
+    "level": 3
 }, {
     "code": "mk",
-    "name": "Macedonië, Ex-Joegoslavische Republiek"
+    "name": "Macedonië, Ex-Joegoslavische Republiek",
+    "level": 2
 }, {
     "code": "ml",
-    "name": "Mali"
+    "name": "Mali",
+    "level": 3
 }, {
     "code": "mm",
-    "name": "Myanmar"
+    "name": "Myanmar",
+    "level": 3
 }, {
     "code": "mn",
-    "name": "Mongolië"
+    "name": "Mongolië",
+    "level": 2
 }, {
     "code": "mo",
-    "name": "Macao"
+    "name": "Macao",
+    "level": 3
 }, {
     "code": "mp",
-    "name": "Noordelijke Marianen"
+    "name": "Noordelijke Marianen",
+    "level": 3
 }, {
     "code": "mq",
-    "name": "Martinique"
+    "name": "Martinique",
+    "level": 3
 }, {
     "code": "mr",
-    "name": "Mauritanië"
+    "name": "Mauritanië",
+    "level": 3
 }, {
     "code": "ms",
-    "name": "Montserrat"
+    "name": "Montserrat",
+    "level": 3
 }, {
     "code": "mt",
-    "name": "Malta"
+    "name": "Malta",
+    "level": 2
 }, {
     "code": "mu",
-    "name": "Mauritius"
+    "name": "Mauritius",
+    "level": 3
 }, {
     "code": "mv",
-    "name": "Maldiven"
+    "name": "Maldiven",
+    "level": 3
 }, {
     "code": "mw",
-    "name": "Malawi"
+    "name": "Malawi",
+    "level": 3
 }, {
     "code": "mx",
-    "name": "Mexico"
+    "name": "Mexico",
+    "level": 1
 }, {
     "code": "my",
-    "name": "Maleisië"
+    "name": "Maleisië",
+    "level": 3
 }, {
     "code": "mz",
-    "name": "Mozambique"
+    "name": "Mozambique",
+    "level": 3
 }, {
     "code": "na",
-    "name": "Namibië"
+    "name": "Namibië",
+    "level": 3
 }, {
     "code": "nc",
-    "name": "Nieuw-Caledonië"
+    "name": "Nieuw-Caledonië",
+    "level": 3
 }, {
     "code": "ne",
-    "name": "Niger"
+    "name": "Niger",
+    "level": 3
 }, {
     "code": "nf",
-    "name": "Norfolk"
+    "name": "Norfolk",
+    "level": 3
 }, {
     "code": "ng",
-    "name": "Nigeria"
+    "name": "Nigeria",
+    "level": 2
 }, {
     "code": "ni",
-    "name": "Nicaragua"
+    "name": "Nicaragua",
+    "level": 3
 }, {
     "code": "nl",
-    "name": "Nederland"
+    "name": "Nederland",
+    "level": 1
 }, {
     "code": "no",
-    "name": "Noorwegen"
+    "name": "Noorwegen",
+    "level": 1
 }, {
     "code": "np",
-    "name": "Nepal"
+    "name": "Nepal",
+    "level": 2
 }, {
     "code": "nr",
-    "name": "Nauru"
+    "name": "Nauru",
+    "level": 3
 }, {
     "code": "nu",
-    "name": "Niue"
+    "name": "Niue",
+    "level": 3
 }, {
     "code": "nz",
-    "name": "Nieuw-Zeeland"
+    "name": "Nieuw-Zeeland",
+    "level": 2
 }, {
     "code": "om",
-    "name": "Oman"
+    "name": "Oman",
+    "level": 3
 }, {
     "code": "pa",
-    "name": "Panama"
+    "name": "Panama",
+    "level": 1
 }, {
     "code": "pe",
-    "name": "Peru"
+    "name": "Peru",
+    "level": 2
 }, {
     "code": "pf",
-    "name": "Frans-Polynesië"
+    "name": "Frans-Polynesië",
+    "level": 3
 }, {
     "code": "pg",
-    "name": "Papoea-Nieuw-Guinea"
+    "name": "Papoea-Nieuw-Guinea",
+    "level": 3
 }, {
     "code": "ph",
-    "name": "Filipijnen"
+    "name": "Filipijnen",
+    "level": 3
 }, {
     "code": "pk",
-    "name": "Pakistan"
+    "name": "Pakistan",
+    "level": 2
 }, {
     "code": "pl",
-    "name": "Polen"
+    "name": "Polen",
+    "level": 1
 }, {
     "code": "pm",
-    "name": "Saint-Pierre en Miquelon"
+    "name": "Saint-Pierre en Miquelon",
+    "level": 3
 }, {
     "code": "pn",
-    "name": "Pitcairn"
+    "name": "Pitcairn",
+    "level": 3
 }, {
     "code": "pr",
-    "name": "Puerto Rico"
+    "name": "Puerto Rico",
+    "level": 3
 }, {
     "code": "ps",
-    "name": "Palestina"
+    "name": "Palestina",
+    "level": 2
 }, {
     "code": "pt",
-    "name": "Portugal"
+    "name": "Portugal",
+    "level": 1
 }, {
     "code": "pw",
-    "name": "Palau"
+    "name": "Palau",
+    "level": 3
 }, {
     "code": "py",
-    "name": "Paraguay"
+    "name": "Paraguay",
+    "level": 2
 }, {
     "code": "qa",
-    "name": "Qatar"
+    "name": "Qatar",
+    "level": 2
 }, {
     "code": "re",
-    "name": "Réunion"
+    "name": "Réunion",
+    "level": 3
 }, {
     "code": "ro",
-    "name": "Roemenië"
+    "name": "Roemenië",
+    "level": 2
 }, {
     "code": "rs",
-    "name": "Servië"
+    "name": "Servië",
+    "level": 2
 }, {
     "code": "ru",
-    "name": "Rusland"
+    "name": "Rusland",
+    "level": 1
 }, {
     "code": "rw",
-    "name": "Rwanda"
+    "name": "Rwanda",
+    "level": 3
 }, {
     "code": "sa",
-    "name": "Saudi-Arabië"
+    "name": "Saudi-Arabië",
+    "level": 1
 }, {
     "code": "sb",
-    "name": "Salomonseilanden"
+    "name": "Salomonseilanden",
+    "level": 3
 }, {
     "code": "sc",
-    "name": "Seychellen"
+    "name": "Seychellen",
+    "level": 3
 }, {
     "code": "sd",
-    "name": "Soedan"
+    "name": "Soedan",
+    "level": 2
 }, {
     "code": "se",
-    "name": "Zweden"
+    "name": "Zweden",
+    "level": 1
 }, {
     "code": "sg",
-    "name": "Singapore"
+    "name": "Singapore",
+    "level": 3
 }, {
     "code": "sh",
-    "name": "Sint-Helena"
+    "name": "Sint-Helena",
+    "level": 3
 }, {
     "code": "si",
-    "name": "Slovenië"
+    "name": "Slovenië",
+    "level": 2
 }, {
     "code": "sj",
-    "name": "Spitsbergen en Jan Mayen"
+    "name": "Spitsbergen en Jan Mayen",
+    "level": 3
 }, {
     "code": "sk",
-    "name": "Slowakije"
+    "name": "Slowakije",
+    "level": 2
 }, {
     "code": "sl",
-    "name": "Sierra Leone"
+    "name": "Sierra Leone",
+    "level": 3
 }, {
     "code": "sm",
-    "name": "San Marino"
+    "name": "San Marino",
+    "level": 3
 }, {
     "code": "sn",
-    "name": "Senegal"
+    "name": "Senegal",
+    "level": 2
 }, {
     "code": "so",
-    "name": "Somalië"
+    "name": "Somalië",
+    "level": 2
 }, {
     "code": "sr",
-    "name": "Suriname"
+    "name": "Suriname",
+    "level": 3
 }, {
     "code": "ss",
-    "name": "Zuid-Soedan"
+    "name": "Zuid-Soedan",
+    "level": 3
 }, {
     "code": "st",
-    "name": "São Tomé en Principe"
+    "name": "São Tomé en Principe",
+    "level": 3
 }, {
     "code": "sv",
-    "name": "El Salvador"
+    "name": "El Salvador",
+    "level": 3
 }, {
     "code": "sx",
-    "name": "Sint Maarten (Nederlands deel)"
+    "name": "Sint Maarten (Nederlands deel)",
+    "level": 3
 }, {
     "code": "sy",
-    "name": "Syrië"
+    "name": "Syrië",
+    "level": 2
 }, {
     "code": "sz",
-    "name": "Ngwane, Koninkrijk Swaziland"
+    "name": "Ngwane, Koninkrijk Swaziland",
+    "level": 3
 }, {
     "code": "tc",
-    "name": "Turks- en Caicoseilanden"
+    "name": "Turks- en Caicoseilanden",
+    "level": 3
 }, {
     "code": "td",
-    "name": "Tsjaad"
+    "name": "Tsjaad",
+    "level": 3
 }, {
     "code": "tf",
-    "name": "Franse Zuidelijke Gebieden"
+    "name": "Franse Zuidelijke Gebieden",
+    "level": 3
 }, {
     "code": "tg",
-    "name": "Togo"
+    "name": "Togo",
+    "level": 3
 }, {
     "code": "th",
-    "name": "Thailand"
+    "name": "Thailand",
+    "level": 2
 }, {
     "code": "tj",
-    "name": "Tadzjikistan"
+    "name": "Tadzjikistan",
+    "level": 3
 }, {
     "code": "tk",
-    "name": "Tokelau"
+    "name": "Tokelau",
+    "level": 3
 }, {
     "code": "tl",
-    "name": "Timor Leste"
+    "name": "Timor Leste",
+    "level": 3
 }, {
     "code": "tm",
-    "name": "Turkmenistan"
+    "name": "Turkmenistan",
+    "level": 3
 }, {
     "code": "tn",
-    "name": "Tunesië"
+    "name": "Tunesië",
+    "level": 2
 }, {
     "code": "to",
-    "name": "Tonga"
+    "name": "Tonga",
+    "level": 2
 }, {
     "code": "tr",
-    "name": "Turkije"
+    "name": "Turkije",
+    "level": 1
 }, {
     "code": "tt",
-    "name": "Trinidad en Tobago"
+    "name": "Trinidad en Tobago",
+    "level": 3
 }, {
     "code": "tv",
-    "name": "Tuvalu"
+    "name": "Tuvalu",
+    "level": 3
 }, {
     "code": "tw",
-    "name": "Taiwan"
+    "name": "Taiwan",
+    "level": 2
 }, {
     "code": "tz",
-    "name": "Tanzania, Verenigde Republiek"
+    "name": "Tanzania, Verenigde Republiek",
+    "level": 3
 }, {
     "code": "ua",
-    "name": "Oekraïne"
+    "name": "Oekraïne",
+    "level": 2
 }, {
     "code": "ug",
-    "name": "Oeganda"
+    "name": "Oeganda",
+    "level": 3
 }, {
     "code": "um",
-    "name": "Ver afgelegen eilandjes van de Verenigde Staten"
+    "name": "Ver afgelegen eilandjes van de Verenigde Staten",
+    "level": 3
 }, {
     "code": "us",
-    "name": "Verenigde Staten van Amerika"
+    "name": "Verenigde Staten van Amerika",
+    "level": 1
 }, {
     "code": "uy",
-    "name": "Uruguay"
+    "name": "Uruguay",
+    "level": 1
 }, {
     "code": "uz",
-    "name": "Oezbekistan"
+    "name": "Oezbekistan",
+    "level": 2
 }, {
     "code": "va",
-    "name": "Heilige Stoel"
+    "name": "Heilige Stoel",
+    "level": 3
 }, {
     "code": "vc",
-    "name": "Saint Vincent en de Grenadines"
+    "name": "Saint Vincent en de Grenadines",
+    "level": 3
 }, {
     "code": "ve",
-    "name": "Venezuela"
+    "name": "Venezuela",
+    "level": 2
 }, {
     "code": "vg",
-    "name": "Maagdeneilanden, Britse"
+    "name": "Maagdeneilanden, Britse",
+    "level": 3
 }, {
     "code": "vi",
-    "name": "Maagdeneilanden, Amerikaanse"
+    "name": "Maagdeneilanden, Amerikaanse",
+    "level": 3
 }, {
     "code": "vn",
-    "name": "Vietnam"
+    "name": "Vietnam",
+    "level": 2
 }, {
     "code": "vu",
-    "name": "Vanuatu"
+    "name": "Vanuatu",
+    "level": 3
 }, {
     "code": "wf",
-    "name": "Wallis en Futuna"
+    "name": "Wallis en Futuna",
+    "level": 3
 }, {
     "code": "xk",
-    "name": "Kosovo"
+    "name": "Kosovo",
+    "level": 3
 }, {
     "code": "ws",
-    "name": "Samoa"
+    "name": "Samoa",
+    "level": 3
 }, {
     "code": "ye",
-    "name": "Jemen"
+    "name": "Jemen",
+    "level": 2
 }, {
     "code": "yt",
-    "name": "Mayotte"
+    "name": "Mayotte",
+    "level": 3
 }, {
     "code": "za",
-    "name": "Zuid-Afrika"
+    "name": "Zuid-Afrika",
+    "level": 2
 }, {
     "code": "zm",
-    "name": "Zambia"
+    "name": "Zambia",
+    "level": 2
 }, {
     "code": "zw",
-    "name": "Zimbabwe"
+    "name": "Zimbabwe",
+    "level": 2
 }]
