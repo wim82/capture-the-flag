@@ -81,11 +81,11 @@ export default {
         .forEach(element => element.classList.remove("reveal"));
     },
     increaseLevelIfNeeded: function() {
-      if (this.currentScore === 20) {
+      if (this.currentScore === 10) {
         this.countries = countries.filter(country => country.level < 3);
       }
 
-      if (this.countries === 50) {
+      if (this.countries === 20) {
         this.countries = countries;
       }
     },
@@ -105,6 +105,7 @@ export default {
             .forEach(element => element.classList.add("reveal"));
           this.hasEnded = true;
         }
+        event.target.blur();
       }, 300);
     }
   }
@@ -155,7 +156,6 @@ export default {
   transition: all 0.3s ease-out;
 }
 
-.answer:hover,
 .answer:active {
   background-color: seagreen;
   color: white;
