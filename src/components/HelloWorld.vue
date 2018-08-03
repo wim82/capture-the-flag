@@ -1,16 +1,16 @@
 <template>
-  <div class="hello">
+  <div class="hello white--text">
     <h1 v-on:click="playAgain()">{{scoreText}}</h1>
     <div class="imageHolder">
-      <img v-on:click="playAgain()" class="flag" :src="getFlag()">
+      <img v-on:click="playAgain()" class="flag" :class="currentCountries.length > 0 ? 'shadow':''" :src="getFlag()">
     </div>
     <div class="answers">
-      <button class="answer" v-for="country in orderedCountries" :key="country.code" 
+      <v-btn class="answer" v-for="(country, index) in orderedCountries" :key="country.code" 
+      :color="colors[index]" :outline="!(reveal && country.code === correctCountry.code)"
+      :class="[!reveal ? '' : reveal && country.code === correctCountry.code ? 'highlight white--text':'blur']"
               v-on:click="checkCountry(country, $event)" 
-              v-bind:class="[country.code === correctCountry.code ? 'right' : '']"
-      >{{country.name}}</button>
+      >{{country.name}}</v-btn>
     </div>
-     <p class="result">{{resultText}}</p>
   </div>
 </template>
 
@@ -28,33 +28,32 @@ export default {
       countries: countries.filter(country => country.level === 1),
       maxScore: 0,
       currentScore: 0,
-      hasEnded: false
+      reveal: false,
+      hasEnded: false,
+      colors: [
+        "light-blue darken-1",
+        "amber darken-2",
+        "pink lighten-1",
+        "light-green"
+      ]
     };
   },
   computed: {
     orderedCountries: function() {
       return orderBy(this.currentCountries, "name");
     },
-    resultText: function() {
-      if (this.hasEnded) {
-        return `Goed zo! Je behaalde ${
-          this.currentScore
-        } punten. Duw op de vlag om opnieuw te beginnen. Volgende keer beter! 👍👍👍`;
-      }
-      if (this.currentCountries.length === 0) {
-        return "Spelletjestijd! Raad de vlag. Duw op de wereld om te beginnen. Veel succes! 👍👍👍";
-      }
-    },
     scoreText: function() {
       if (this.hasEnded) {
-        return "😢 Verloren 😢";
+        return `Verloren 😢 ${this.currentScore} punten! 🤩`;
       }
       if (this.currentCountries.length === 0) {
         return "Hallo Wereld";
       } else if (this.currentScore === 0) {
         return "Raad de vlag!";
       } else {
-        return "Je hebt " + this.currentScore + " punten!";
+        return this.currentScore === 1
+          ? "Eentje is geentje!"
+          : "Je hebt " + this.currentScore + " punten!";
       }
     }
   },
@@ -68,9 +67,12 @@ export default {
         return require("./../assets/world-map.svg");
       }
     },
-    getCountries: function() {
-      this.currentCountries = sampleSize(this.countries, 4);
-      this.correctCountry = this.currentCountries[0];
+    getCountries: function({ delay = 0 } = {}) {
+      setTimeout(() => {
+        this.currentCountries = sampleSize(this.countries, 4);
+        this.correctCountry = this.currentCountries[0];
+        this.reveal = false;
+      }, delay);
     },
     playAgain: function() {
       this.getCountries();
@@ -92,17 +94,14 @@ export default {
     checkCountry: function(country, event) {
       this.increaseLevelIfNeeded();
       setTimeout(() => {
+        this.reveal = true;
         if (country.code === this.correctCountry.code) {
           this.currentScore++;
-          this.getCountries();
+          this.getCountries({ delay: 0 });
         } else {
           if (this.currentScore > this.maxScore) {
             this.maxScore = this.currentScore;
           }
-          event.target.classList.add("wrong");
-          document
-            .querySelectorAll(".answer")
-            .forEach(element => element.classList.add("reveal"));
           this.hasEnded = true;
         }
         event.target.blur();
@@ -113,9 +112,13 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  margin-bottom: 10px;
+}
 .hello {
-  padding: 0 10px;
+  padding: 16px 10px;
   max-width: 800px;
+  margin: 0 auto;
 }
 .imageHolder {
   box-sizing: border-box;
@@ -131,50 +134,61 @@ export default {
   height: auto;
   margin: 0 auto;
   justify-content: center;
-  box-shadow: -2px 4px 24px 3px rgba(77, 77, 77, 0.32);
+  opacity: 0.5;
 }
-.answers {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 10px;
-  padding-right: 10px;
-  justify-content: center;
+
+.flag.shadow {
+  box-shadow: -2px 4px 24px 3px rgba(22, 23, 24, 0.75);
+  opacity: 0.9;
 }
+
 .answer {
   width: 335px;
   text-align: left;
-  font-size: 1.25em;
-  height: 40px;
-  background-color: white;
-  border: 1px solid lightseagreen;
-  border-radius: 6px;
-  color: lightseagreen;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow-x: hidden;
-  margin: 8px;
-  transition: all 0.3s ease-out;
+  height: 44px;
 }
 
-.answer:active {
-  background-color: seagreen;
-  color: white;
+.blur {
+  filter: grayscale(70%) blur(1px);
+  transition: 0.5s filter ease-in-out;
+}
+.highlight {
+  transform-origin: top center;
+  animation-name: tada;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
 }
 
-.answer.reveal.wrong {
-  background-color: red;
-  color: white;
-  border-color: red;
-}
-.answer.reveal.right {
-  background-color: seagreen;
-  color: white;
-  border: 2px solid seagreen;
-  box-shadow: -2px 4px 24px 3px rgba(77, 77, 77, 0.32);
-}
-.result {
-  text-align: left;
-  font-size: 1em;
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
 
 @media (min-width: 420px) {

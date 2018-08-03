@@ -3,6 +3,7 @@ module.exports = {
     name: 'VlaggenVangen',
     appleMobileWebAppStatusBarStyle: 'black-translucent',
     appleMobileWebAppCapable: 'yes',
-    workboxPluginMode: 'GenerateSW'
+    workboxPluginMode: 'GenerateSW',
+    start_url: '/'
   }
 }

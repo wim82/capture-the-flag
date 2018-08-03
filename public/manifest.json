@@ -3,12 +3,11 @@
   "short_name": "Vlaggenvangen",
   "theme_color": "lightseagreen",
   "background_color": "#8d4c9a",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait",
-  "Scope": "/",
+  "scope": "/",
   "start_url": "/",
-  "icons": [
-    {
+  "icons": [{
       "src": "icons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png"
