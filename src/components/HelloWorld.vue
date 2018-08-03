@@ -87,7 +87,7 @@ export default {
         this.countries = countries.filter(country => country.level < 3);
       }
 
-      if (this.countries === 20) {
+      if (this.currentScore === 20) {
         this.countries = countries;
       }
     },
